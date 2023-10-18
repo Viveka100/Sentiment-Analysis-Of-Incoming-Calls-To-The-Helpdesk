@@ -1,0 +1,112 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="{{url_for('static', filename='images/favicon/sentiment.png')}}">
+   
+    <title>Sentiment Analysis</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            background: url('https://s01.sgp1.cdn.digitaloceanspaces.com/article/107360-byxhzxvmlb-1544009839.jpg');
+            Background-repeat: no-repeat;
+            Background-size: cover;
+            margin: auto;
+            font-family: verdana;
+            text-align: center;
+            font-size: 1.3em;
+        }
+
+        label {
+            font-size: 24px;
+        }
+
+        input {
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 5%;
+            background: none;
+            padding: 2% 1%;
+            border: 1px solid #222222;
+            outline: none;
+            color: #000;
+        }
+
+        h2 {
+            color: black;
+            padding-top: 8%;
+            padding-bottom: 8%;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .loginbox {
+            box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+            background-color: #ffffff;
+        }
+
+        .button {
+            width: 40%;
+            color: blanchedalmond;
+            margin-bottom: 15%;
+            margin-top: 10%;
+            padding: 3% 0 3% 0;
+            background-image: linear-gradient(to right, #1d2b64, #2a568d, #4484b2, #6bb3d5, #9ce2f6);
+            border-radius: 10px;
+            font-size: 1.1em;
+            padding: 10px;
+
+        }
+    </style>
+ <div class="container-fluid">
+    <nav class="navbar fixed-top navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#"></a>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Sentiment Analysis For Text </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="about.html">ABOUT US</a></li>
+            
+            </ul>
+        </div>
+    </nav>
+</div>
+<br><br><br><br><br><br>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-2 col-1">
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-10 loginbox">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                        <h2 class="heading">SENTIMENTAL ANALYSIS TOOL:</h2>
+                    </div>
+                </div>
+                
+                
+                
+                <form class="" action="/text.html" method="post">
+                    <label for="review-text"><b>ENTER YOUR REVIEWS:</b> </label>
+                    <input type="text" name="review-text" placeholder="Enter your text here" maxlength="100" id="review-text" class="review-text">
+                    <button type="submit" name="button" class="button">Submit</button>
+                </form>
+                
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div> 
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-2 col-1">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

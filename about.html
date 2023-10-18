@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+   <!-- Favicon -->
+   <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon/sentiment.png') }}">
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center; 
+    }
+
+    #rcorners1 {
+      border-radius: 25px;
+      border: 2px solid #000000;
+      padding: 20px; 
+      width: 600px;
+      height: 200px;
+      background: white;
+      display: inline-block; 
+      text-align: left; 
+    }
+
+    #rcorners2 {
+      border-radius: 25px;
+      border: 2px solid #000000;
+      padding: 20px; 
+      width: 600px;
+      height: 200px; 
+      background: white;
+      display: inline-block; 
+      text-align: left; 
+    }
+
+    #rcorners3 {
+      border-radius: 25px;
+      border: 2px solid #000000;
+      padding: 20px; 
+      width: 600px;
+      height: 200px;
+      background: white;  
+      display: inline-block; 
+      text-align: left; 
+    }
+
+    img {
+      border-radius: 25px;
+      float: left;
+    }
+
+    .myimg {
+            background-image: url({{ url_for('static', filename='about_backg.jpg') }});
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+   
+    /* Style for the "Back" button container */
+    .back-button-container {
+      text-align: center;
+      margin-top: 20px; /* Add margin at the top for spacing */
+    }
+
+    /* Style for the "Back" button */
+    .back-button {
+      background-color: #eff0f3; /* Google blue */
+      color: rgb(51, 78, 159);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      background-color: #357ae8; /* Darker blue on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="myimg">
+    <div class="container">
+      <!-- Content for your "About Us" page goes here -->
+      <div id="rcorners1">
+        <h2>Developer-VIVEKA.L</h2>
+        <p>
+          Welcome to Developer-VIVEKA.L, our source for all things related to IT development.
+          We are passionate about technology and dedicated to providing high-quality
+          development resources and solutions.
+        </p>
+      </div>
+
+      <div id="rcorners2">
+        <h2>Github</h2>
+        <p>
+          Find us on <a href="https://github.com/Viveka-L/VIVEKA.L">GitHub</a> and explore our open-source projects. We believe in
+          collaboration and sharing knowledge with the community.
+        </p>
+      </div>
+
+      <div id="rcorners3">
+
+        <h2>LinkedIn</h2>
+        <p>
+          Connect with us on <a href="https://www.linkedin.com/in/viveka-l-052780233">LinkedIn</a> to stay updated with our latest developments
+          and to network with IT professionals.
+        </p>
+      </div>
+    </div>
+    <!-- Back button container to center the button at the bottom -->
+    <div class="back-button-container">
+      <!-- Back button to go to the previous page -->
+      <button class="back-button" onclick="goBack()">BACK</button>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

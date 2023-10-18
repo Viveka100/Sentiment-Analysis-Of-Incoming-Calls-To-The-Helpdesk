@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+     <!-- Favicon -->
+     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon/sentiment.png') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <title>Sentiment Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url('https://media.istockphoto.com/id/1302189748/photo/digital-cyberspace-with-particles-and-digital-data-network-connections-high-speed-connection.jpg?b=1&s=612x612&w=0&k=20&c=bwDXyw4wOGrBQOQ2Z15DUApR8H2MNogIaIIZp9jnuoQ='); /* Replace with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin-top: 50px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="file"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: rgb(27, 26, 26);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        p {
+            color: #df2424;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Analysis For Calls</h1>
+    
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="audio" accept=".mp3, .wav">
+        <button type="submit">Upload Audio</button>
+    </form>
+<br>
+    {% if sentiment_score is defined %}
+    <h2>Transcribed Text:</h2>
+    <p>{{ transcribed_text }}</p>
+<br>
+</br>
+<h2>Sentiment:</h2>
+<p>{{ sentiment_label }}</p><p>{{ sentiment_score }}</p>
+{% endif %}
+</body>
+</html>
+ <!-- Button for text sentiment analysis -->
+ <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <div class="prompt-buttons">
+        <button type="button" id="btn-prompt-media" class="btn btn-dark"
+            onclick="redirectToHome()">Social Media Text Analysis - Click Here</button>
+    </div>
+    <!-- JavaScript function to redirect to home.html -->
+    <script>
+        function redirectToHome() {
+            window.location.href = 'text.html'; 
+        }
+    </script>
+</a>
+</body>
+</html>

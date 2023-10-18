@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <!-- Favicon -->
+ <link rel="icon" type="image/png" href="{{url_for('static', filename='images/favicon/sentiment.png')}}">
+<style>
+   body {
+      background-image: url({{address}});
+      background-repeat:no-repeat;
+      background-size: cover;
+        }
+	
+.results{
+      color: black;
+      font-family: Gerdana;
+      font-size: 300%;
+      text-align: center;
+   }
+h1 {
+
+      color: black;
+      font-family: Gerdana;
+      font-size: 300%;
+      text-align: center;
+    }
+.emo{
+     font-size:100px;
+     text-align: center;
+     }
+h4{
+    text-align: center;
+    font-size: 300%;
+   }
+   .redirect{
+   text-align:right;
+   padding:50px;
+   }
+</style>
+
+</head>
+<body background>
+<div class="results">
+<h3>The entered statement was:</h3>
+</div>
+<h4>{{sentence}}</h4> 
+<h1> Sentiment is: {{sent}}</h1>
+<div class="emo">
+<p>
+{{emoji}}
+</p>
+</div>
+<div class="redirect"><a href="/"><button>CHECK ANOTHER STATEMENT</button></a>
+</body>
+</html>

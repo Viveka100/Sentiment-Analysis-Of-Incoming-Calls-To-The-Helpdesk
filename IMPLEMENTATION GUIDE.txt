@@ -1,0 +1,10 @@
+IMPLEMENTATION
+----------------
+1.EXTRACT ZIP FILE
+2.OPEN FILE DIRECTORY IN CMD (COMMAND PROMPT)
+3.AFTER OPENING CMD 
+c:/hp:/:Phising detection-(now type)python main.py
+
+4.NOW ITS RUNNING COPY AND PASTE URL IN BROWSER
+
+http://localhost:5000/
